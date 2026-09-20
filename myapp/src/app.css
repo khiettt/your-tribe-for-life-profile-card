@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Bebas Neue';
-    src: url('/src/lib/fonts/BebasNeue-Regular.woff2') format('woff2');
+    src: url('$lib/fonts/BebasNeue-Regular.woff2') format('woff2');
 }
 
 :root {
