@@ -1,0 +1,19 @@
+:root {
+  --color-background: #F6EEE4;
+
+    /* card colors */
+  --color-burgundy: #3D111A;
+  --color-dark-brown: #412C27;
+  --color-blush: #EBBAC3;
+
+  /* font sizes */
+    --font-size-base: 1rem;     /*a 16px */
+    --font-size-h3: 1.25rem;    /* 20px */
+    --font-size-h2: 1.5rem;     /* 24px */
+    --font-size-h1: 2rem;      /* 32px */
+
+    @font-face {
+        font-family: 'Bebas Neue';
+        src: url('/src/lib/fonts/BebasNeue-Regular.woff2') format('wolff2');
+    }
+}
