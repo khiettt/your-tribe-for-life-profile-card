@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/src/lib/fonts/BebasNeue-Regular.woff2') format('woff2');
+}
+
 :root {
   --color-background: #F6EEE4;
 
@@ -12,8 +17,30 @@
     --font-size-h2: 1.5rem;     /* 24px */
     --font-size-h1: 2rem;      /* 32px */
 
-    @font-face {
-        font-family: 'Bebas Neue';
-        src: url('/src/lib/fonts/BebasNeue-Regular.woff2') format('wolff2');
-    }
 }
+body{
+    margin: 0;
+    background-color: var(--color-background);
+    }
+    .red-header{
+        background-color: var(--color-burgundy);
+        height: 75px;
+    }
+    h1{
+        font-family: 'Bebas Neue';
+        font-size: var(--font-size-h1);
+        color: var(--color-dark-brown);
+        margin-left: 10px;
+        letter-spacing: 3px;
+    }
+    p{
+        font-family: 'Bebas Neue';
+        font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
+        color: var(--color-dark-brown);
+        margin-left: 10px;
+        max-width: 40ch;
+
+        @media (min-width: 365px){
+            max-width: 60ch;
+        }
+    }

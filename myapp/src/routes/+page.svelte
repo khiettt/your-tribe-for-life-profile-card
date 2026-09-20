@@ -76,3 +76,175 @@
     </div>
 </main>
 
+<style>
+    .golden-stars{
+        width: 30px;
+        position: relative;
+        top: -60px;
+        margin-left: 10px;
+    }
+    .div-mac-cover{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    .mac-cover{
+        max-width: 20%;
+        position: absolute;
+        transform: translateY(-2.5rem);
+        right: -20px;
+        margin-top: 1lh;
+    }
+    .div-star-deco{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .star-deco{
+        max-width: 30%;
+        position: relative;
+        position: absolute;
+        transform: translateY(-11.5em);
+        right: -37px;
+    }
+    .div-chess{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .chess-img{
+        position: absolute;
+        right: -20px;
+        transform: translateY(-8.5rem);
+        max-width: 20%;
+    }
+    .div-books-img{
+        display: flex;
+    }
+    .book-img{
+        max-width: 20%;
+        position: relative;
+        left: -25px;
+        bottom: -25px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .img-selfie{
+        display: block;
+        margin: 0 auto;
+        margin-top: -80px;
+        border-radius: 50%;
+        border: 5px solid var(--color-background);
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+
+        p{
+            z-index: 1;
+        }
+    }
+    .p-folder{
+        font-family: 'Bebas Neue';
+        font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
+        color: var(--color-burgundy);
+        margin-left: 10px;
+        max-width: 40ch;
+        border: 1px solid var(--color-background);
+        background-color: var(--color-background);
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+
+        @media (min-width: 365px){
+            max-width: 60ch;
+        }
+    }
+    a{
+        display: flex;
+        flex-direction: column;
+        column-gap: 20px;
+        font-family: 'Bebas Neue';
+        font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
+        margin-left: 10px;
+        border: 1px solid var(--color-background);
+        border-radius: 10px;
+        background-color: var(--color-background);
+        color: var(--color-burgundy);
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin: 15px;
+        width: 140px;
+    }
+    main > details:first-of-type{
+        margin-top: 40px;
+    }
+    .stack-folder{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 65%;
+    }
+    .folder{
+        position: relative;
+        margin-top: -148px;
+    }
+    
+    .folder--about { z-index: 1; }
+    .folder--projects { z-index: 2; }
+    .folder--skills { z-index: 3; }
+
+    .folder[open]{
+        z-index: 10;
+    }
+
+    summary{
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        min-width: 140px;
+        padding: 10px 24px;
+        border-radius: 12px 12px 0 0;
+        color: var(--color-background);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        z-index: 2;
+    }
+
+    summary::marker{
+        display: none;
+        content: none;
+    }
+
+    .folder--about summary {background-color: var(--color-burgundy);} 
+    .folder--projects summary {background-color: var(--color-dark-brown);}
+    .folder--skills summary {background-color: var(--color-blush);}
+
+    .folder--projects{
+        text-align: right;
+    }
+    .folder--projects::details-content{
+        text-align: left;
+    }
+
+    @supports(selector(::details-content)) {
+        .folder::details-content {
+            padding: 20px;
+            min-height: 180px;
+            border-radius: 0 12px 12px 12px;
+            overflow: clip;
+            color: var(--color-background);
+            transition: height 0.3s ease, content-visibility 0.3s;
+        }
+    }
+
+    .folder--about::details-content    { background-color: var(--color-burgundy); }
+    .folder--projects::details-content { background-color: var(--color-dark-brown); }
+    .folder--skills::details-content   { background-color: var(--color-blush); }
+
+</style>
