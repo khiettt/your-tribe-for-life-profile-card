@@ -2,6 +2,12 @@
     font-family: 'Bebas Neue';
     src: url('$lib/fonts/BebasNeue-Regular.woff2') format('woff2');
 }
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
 
 :root {
   --color-background: #F6EEE4;
@@ -26,21 +32,35 @@ body{
         background-color: var(--color-burgundy);
         height: 75px;
     }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     h1{
         font-family: 'Bebas Neue';
         font-size: var(--font-size-h1);
         color: var(--color-dark-brown);
         margin-left: 10px;
         letter-spacing: 3px;
+        animation: fade-in 0.8s ease-out;
+
     }
     p{
         font-family: 'Bebas Neue';
         font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
         color: var(--color-dark-brown);
         margin-left: 10px;
-        max-width: 40ch;
+        margin-right: 10px;
 
-        @media (min-width: 365px){
-            max-width: 60ch;
+        animation: fade-in 0.8s ease-out 0.2s backwards;
+
         }
     }

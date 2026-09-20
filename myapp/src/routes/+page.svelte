@@ -2,7 +2,6 @@
     import selfieImg from '$lib/assets/IMG_6255.webp';
     import goldenStars from '$lib/assets/Starss.svg';
     import macCover from '$lib/assets/MacCover.svg';
-    import starDeco from '$lib/assets/StarrDeco.svg';
     import chessImg from '$lib/assets/Chess.svg';
     import booksImg from '$lib/assets/Bookss.svg';
     
@@ -33,10 +32,7 @@
     </div>
     
     
-    <div class="stack-folder">
-        <div class="decoration-star-deco">
-            <img src="{starDeco}" alt="" class="star-deco">
-        </div>    
+    <div class="stack-folder"> 
         <details class="folder folder--about">
             <summary>About me</summary>
             <p class="about-me">Nickname: {person.nickname}</p>
@@ -86,7 +82,14 @@
         position: relative;
         top: -60px;
         margin-left: 10px;
+
+        animation: twinkle 2.5s ease-in-out infinite;
     }
+    @keyframes twinkle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+    }
+
     .decoration-mac-cover{
         display: flex;
         justify-content: flex-end;
@@ -100,18 +103,6 @@
         max-width: 20%;
         height: auto;
     }
-    .decoration-star-deco{
-        display: flex;
-        justify-content: flex-end;
-        position: relative;
-    }
-    .star-deco{
-        position: absolute;
-        bottom: 65px;
-        right: 0;
-        max-width: 30%;
-        height: auto;
-    }
     .decoration-chess{
         display: flex;
         justify-content: flex-end;
@@ -122,6 +113,11 @@
         bottom: 60px;
         max-width: 20%;
         margin-right: 0.3rem;
+
+        &:hover{
+            transform: rotate(-360deg) scale(1.05);
+            transition: transform 1s ease-in-out;
+        }
     }
     .decoration-books-img{
         display: flex;
@@ -195,7 +191,7 @@
     .stack-folder{
         margin-left: 5px;
         margin-right: 5px;
-        margin-top: 65%;
+        margin-top: 2rem;
     }
     .folder{
         position: relative;
@@ -250,12 +246,10 @@
             border-radius: 0 12px 12px 12px;
             overflow: clip;
             color: var(--color-background);
-            transition: height 0.3s ease, content-visibility 0.3s;
         }
     }
 
     .folder--about::details-content    { background-color: var(--color-burgundy); }
     .folder--projects::details-content { background-color: var(--color-dark-brown); }
     .folder--skills::details-content   { background-color: var(--color-blush); }
-
 </style>
