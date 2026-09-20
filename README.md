@@ -5,7 +5,7 @@ Voor deze sprint heb ik een redesign gemaakt van mijn visitekaartje. Ik heb op [
 ## Inhoudsopgave 
 - [Beschrijving](#Beschrijving)
 - [Designkeuze](#Designkeuze)
-- [Gebruik van websitesite](#Gebruik-van-websitesite)
+- [Gebruik van website](#Gebruik-van-website)
 - [Kenmerken van de website](#Kenmerken-van-de-website)
 - [Code conventies](#Code-conventies)
 - [Installatie](#Installatie)
