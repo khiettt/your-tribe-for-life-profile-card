@@ -168,6 +168,10 @@
         padding: 0;
         margin: 0;
     }
+    h3{
+        font-size: var(--font-size-h3);
+        font-family: 'Bebas Neue';
+    }
     a{
         display: flex;
         flex-direction: column;
@@ -195,6 +199,8 @@
     }
     .folder{
         position: relative;
+    }
+    .folder:not(:first-of-type){
         margin-top: -148px;
     }
     

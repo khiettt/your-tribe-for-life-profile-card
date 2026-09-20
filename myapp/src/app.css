@@ -52,6 +52,9 @@ body{
         letter-spacing: 3px;
         animation: fade-in 0.8s ease-out;
 
+        @media (min-width: 645px){
+            text-align: center;
+        }
     }
     p{
         font-family: 'Bebas Neue';
@@ -62,5 +65,7 @@ body{
 
         animation: fade-in 0.8s ease-out 0.2s backwards;
 
+        @media (min-width: 645px){
+            text-align: center;
         }
     }
