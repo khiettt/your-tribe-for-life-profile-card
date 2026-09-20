@@ -8,70 +8,74 @@
     
     let {data} = $props()
     const person = $derived(data.person[0])
-
 </script>
 
 <header>
     <div class="red-header"></div>
-    <img src="{goldenStars}" alt="selfie" class="golden-stars">
+    <img src="{goldenStars}" alt="" class="golden-stars">
 </header>
 
 <main>
-    <img src="{selfieImg}" alt="selfie" class="img-selfie">
-    <div class="div-chess">
-        <img src="{chessImg}" alt="selfie" class="chess-img">
+    <img src="{selfieImg}" alt="Khitam's Selfie" class="img-selfie">
+    <div class="decoration-chess">
+        <img src="{chessImg}" alt="" class="chess-img">
     </div>
     
     <h1> Hii I'm {person.name}...</h1>
     <p>{person.bio}</p>
 
-    <div class="div-mac-cover">
-        <img src="{macCover}" alt="selfie" class="mac-cover">
+    <div class="decoration-mac-cover">
+        <img src="{macCover}" alt="" class="mac-cover">
     </div>
 
-    <div class="div-books-img">
-        <img src="{booksImg}" alt="selfie" class="book-img">
+    <div class="decoration-books-img">
+        <img src="{booksImg}" alt="" class="book-img">
     </div>
     
     
     <div class="stack-folder">
-        <div class="div-star-deco">
-            <img src="{starDeco}" alt="selfie" class="star-deco">
+        <div class="decoration-star-deco">
+            <img src="{starDeco}" alt="" class="star-deco">
         </div>    
         <details class="folder folder--about">
             <summary>About me</summary>
-            <p class="p-folder">Nickname: {person.nickname}</p>
-            <p class="p-folder">Birthdate: {person.birthdate}</p>
-            <p class="p-folder">Born and raised in {person.residency}</p>
-            <p class="p-folder"> Hobbies: {person.fav_hobby} and {person.fav_game}</p>
-            <p class="p-folder">Favorite movie: {person.fav_movie}</p>
-            
+            <p class="about-me">Nickname: {person.nickname}</p>
+            <p class="about-me">Birthdate: {person.birthdate}</p>
+            <p class="about-me">Born and raised in {person.residency}</p>
+            <p class="about-me"> Hobbies: {person.fav_hobby} and {person.fav_game}</p>
+            <p class="about-me">Favorite movie: {person.fav_movie}</p>
         </details>
     
         <details class="folder folder--projects">
             <summary>Projects</summary>
-            <p class="p-folder">Semster 1</p>
-            <a href="https://khiettt.github.io/your-tribe-profile-card/">Profilecard sprint 1</a>
-            <a href="https://khiettt.github.io/your-tribe-squad-page/" >Squadpage Sprint 1</a>
-            <a href="https://khiettt.github.io/the-client-website/"> Buurtcampus Sprint 2</a>
-            <a href="https://khiettt.github.io/the-client-website/">Buurtcampus Sprint 4</a>
-            <a href="https://khiettt.github.io/the-startup-responsive-interactive-website/">Werktijden.nl Sprint 6</a>
 
-            <p class="p-folder">Semster 2</p>
-            <a href="https://connect-your-tribe-profile-card-5f3c.onrender.com">Profilecard sprint 7</a>
-            <a href="https://connect-your-tribe-squad-page-yta5.onrender.com">Squadpage sprint 7</a>
-            <a href="https://server-side-rendering-server-side-website-7oew.onrender.com">Milledoni sprint 8</a>
-            <a href="https://user-experience-enhanced-website-zv3j.onrender.com">Milledoni sprint 10</a>
-            <a href="https://proof-of-concept-khiettt-jebq.onrender.com">Tweakers sprint 12</a>
+            <h3>Semester 1</h3>
+            <ul>
+                <li><a href="https://khiettt.github.io/your-tribe-profile-card/">Profilecard sprint 1</a></li>
+                <li><a href="https://khiettt.github.io/your-tribe-squad-page/">Squadpage Sprint 1</a></li>
+                <li><a href="https://khiettt.github.io/the-client-website/">Buurtcampus Sprint 2</a></li>
+                <li><a href="https://khiettt.github.io/the-client-website/">Buurtcampus Sprint 4</a></li>
+                <li><a href="https://khiettt.github.io/the-startup-responsive-interactive-website/">Werktijden.nl Sprint 6</a></li>
+            </ul>
+
+            <h3>Semester 2</h3>
+            <ul>
+                <li><a href="https://connect-your-tribe-profile-card-5f3c.onrender.com">Profilecard sprint 7</a></li>
+                <li><a href="https://connect-your-tribe-squad-page-yta5.onrender.com">Squadpage sprint 7</a></li>
+                <li><a href="https://server-side-rendering-server-side-website-7oew.onrender.com">Milledoni sprint 8</a></li>
+                <li><a href="https://user-experience-enhanced-website-zv3j.onrender.com">Milledoni sprint 10</a></li>
+                <li><a href="https://proof-of-concept-khiettt-jebq.onrender.com">Tweakers sprint 12</a></li>
+            </ul>
 
         </details>
     
         <details class="folder folder--skills">
         <summary>Skills</summary>
-        <p class="p-folder">HTML</p>
-        <p class="p-folder">CSS</p>
-        <p class="p-folder">JS</p>
-
+            <ul class="skills-list">
+                <li class="list-folder">HTML</li>
+                <li class="list-folder">CSS</li>
+                <li class="list-folder">JS</li>
+                </ul>
         </details>
     </div>
 </main>
@@ -83,47 +87,50 @@
         top: -60px;
         margin-left: 10px;
     }
-    .div-mac-cover{
+    .decoration-mac-cover{
         display: flex;
         justify-content: flex-end;
+        position: relative;
 
     }
     .mac-cover{
-        max-width: 20%;
         position: absolute;
-        transform: translateY(-2.5rem);
-        right: -20px;
-        margin-top: 1lh;
+        top: 0;
+        right: 0;
+        max-width: 20%;
+        height: auto;
     }
-    .div-star-deco{
+    .decoration-star-deco{
         display: flex;
         justify-content: flex-end;
+        position: relative;
     }
     .star-deco{
-        max-width: 30%;
-        position: relative;
         position: absolute;
-        transform: translateY(-11.5em);
-        right: -37px;
+        bottom: 65px;
+        right: 0;
+        max-width: 30%;
+        height: auto;
     }
-    .div-chess{
+    .decoration-chess{
         display: flex;
         justify-content: flex-end;
+        position: relative;
     }
     .chess-img{
         position: absolute;
-        right: -20px;
-        transform: translateY(-8.5rem);
+        bottom: 60px;
         max-width: 20%;
+        margin-right: 0.3rem;
     }
-    .div-books-img{
+    .decoration-books-img{
         display: flex;
     }
     .book-img{
-        max-width: 20%;
-        position: relative;
+        position: relative; 
         left: -25px;
         bottom: -25px;
+        max-width: 20%;
     }
     main{
         display: flex;
@@ -139,12 +146,11 @@
         width: 120px;
         height: 120px;
         object-fit: cover;
-
-        p{
-            z-index: 1;
-        }
     }
-    .p-folder{
+    .about-me{
+        color: var(--color-background);
+    }
+    .list-folder{
         font-family: 'Bebas Neue';
         font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
         color: var(--color-burgundy);
@@ -160,6 +166,11 @@
         @media (min-width: 365px){
             max-width: 60ch;
         }
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
     a{
         display: flex;
