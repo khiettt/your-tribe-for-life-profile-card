@@ -2,6 +2,9 @@
 
 Voor deze sprint heb ik een redesign gemaakt van mijn visitekaartje. Ik heb op [Figma](https://www.figma.com/design/ogeBMoswsSbl0CdDmMVIDh/Profile-card-s13?node-id=0-1&t=KKeeOEHFR8Ur6ZHd-1) mijn ideeën uitgewerkt en met sveltekit een nieuwe [visitekaart](https://your-tribe-forlife-profilecard.netlify.app/) gemaakt. Voel je vrij om een kijkje te nemen. 
 
+### Bronnen
+[NetlifyDocs](https://docs.netlify.com/build/frameworks/framework-setup-guides/sveltekit/)
+
 ## Inhoudsopgave 
 - [Beschrijving](#Beschrijving)
 - [Designkeuze](#Designkeuze)
@@ -47,9 +50,27 @@ in mijn MoodBoard heb ik al mijn kleur/stijl/icoon ideeën toegevoegd die ik dac
 
 ## Gebruik van website
 
+Mijn profilecard laat zien wie ik ben en wat ik het afgelopen schooljaar heb geleerd. In de folder ‘**Projects**’ kun je mijn voortgang en de projecten waar ik aan heb gewerkt goed bekijken.
+De schaakstukken, het MacBook-hoesje en de boeken laten zien wat ik leuk vind om in mijn vrije tijd te doen.
+
+- Klik op een folder om meer te ontdekken!
+
+## Kenmerken van de site
+
+Voor het ontwikkelen van de website heb ik gebruikgemaakt van SvelteKit in combinatie met de Directus API. De gegevens worden grotendeels dynamisch vanuit de API ingeladen met behulp van een load-functie. Persoonsgegevens worden vanuit Directus opgehaald en via $props() doorgegeven aan de verschillende componenten.
+Om de website overzichtelijk en onderhoudbaar te houden, heb ik onderdelen zoals de navigatie en footer als herbruikbare componenten opgebouwd. Daarnaast heb ik ervoor gezorgd dat de website op verschillende schermformaten goed werkt door gebruik te maken van media queries.
+
+Bij het opbouwen van de pagina's heb ik geprobeerd de HTML zo semantisch mogelijk te schrijven. Hierdoor is de structuur van de website duidelijker en toegankelijker.
+
+### Bronnen 
+
+[Sveltekit Docs](https://svelte.dev/docs/kit/introduction)
+[Loading Function](https://svelte.dev/docs/kit/load)
+[Data filteren](https://directus.io/docs/guides/connect/filter-rules)
+
 ## Code conventies
 
-Ik heb de code afspraken aangehouden die terug zijn gekomen in het project `your-tribe-for-life-squadpage`. Voor mijn issues heb ik de issue template gebruikt die terug kwam in de [contributing](https://github.com/meemo99/your-tribe-for-life-squad-page/blob/main/CONTRIBUTING.md) van de squad page. 
+Ik heb mij zoveel mogelijk gehouden aan de codeafspraken die beschreven staan in de [codeconventies](https://docs.fdnd.nl/conventies.html) Bij het aanmaken van mijn issues heb ik, waar van toepassing, gebruik gemaakt van de issue template uit de [Contributing](https://github.com/meemo99/your-tribe-for-life-squad-page/blob/main/CONTRIBUTING.md) van de Squad-pagina.
 
 
 ## Installatie
